@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/forms">
+    <file>PyBooklet.ui</file>
+  </qresource>
+  <qresource prefix="/resources">
+    <file>images/dir.png</file>
+    <file>images/file.png</file>
+    <file>images/PyBooklet.png</file>
+    <file>images/PyBookleticon.png</file>
+    <file>images/smalldonate.png</file>
+  </qresource>
+</RCC>

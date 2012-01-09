@@ -1,0 +1,12 @@
+PyBooklet
+=========
+
+A GUI utility to convert a PDF file into 2 Pages-Per-Sheet double-sided booklet ready for printing.
+
+
+THE IDEA:
+=========
+
+I needed to print a large pdf about starting QT programming and I couldn't find out how to make the print double-sided
+with 2 pages per sheet, so I made this tool ... with Python and QT.
+This file was modified by PyCharm 1.5.4 for binding GitHub repository

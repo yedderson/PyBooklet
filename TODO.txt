@@ -1,0 +1,5 @@
+-   make use of the SVG files directly in the UI instead of PNGs
+-   refactor the dialogs
+-   a short video animation to illustrate how to handle
+    the generated PDFs when printing
+-   activate [check for update] feature
