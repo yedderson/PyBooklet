@@ -1,5 +1,6 @@
 PyBooklet
 ---------
+
 .. image:: http://cloud.github.com/downloads/yedderson/PyBooklet/PyBooklet_screenshot.PNG
   :align: center
 
