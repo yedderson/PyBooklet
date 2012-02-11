@@ -1,6 +1,6 @@
 PyBooklet
 ---------
-.. image:: /PyBooklet/resources/images/PyBooklet_screenshot.PNG
+.. image:: PyBooklet/resources/images/PyBooklet_screenshot.PNG
   :align: center
 
 A GUI utility to convert a PDF file into 2 Pages-Per-Sheet double-sided booklet ready for printing.
