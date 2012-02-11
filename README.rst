@@ -2,7 +2,6 @@ PyBooklet
 ---------
 
 .. image:: https://github.com/downloads/yedderson/PyBooklet/PyBooklet_screenshot.PNG
-  :align: middle
   :scale: 80
 
 
