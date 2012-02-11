@@ -3,25 +3,23 @@ PyBooklet
 A GUI utility to convert a PDF file into 2 Pages-Per-Sheet double-sided booklet ready for printing.
 
 .. image:: https://github.com/downloads/yedderson/PyBooklet/PyBooklet_screenshot.PNG
-  :scale: 80%
+  :align: : center
 
 
 THE IDEA
 --------
-I needed to print a large pdf book about starting QT/Python programming and I couldn't find out how to make the print
+I needed to print a large pdf book about starting development with Python and QT and I couldn't find out how to make the print
 double-sided with 2 pages per sheet, so I made this tool ... with Python and QT.
 
-Learning by doing, yes. And again, the intention behind is to start a substantial open source project to familiarize
-with all the aspects from working on a Version Control System and build a project structure to finally packaging
-and distributing.
+Learning by doing, yes. And again, the intention behind is to start an open source project from the ground up to familiarize
+with all the aspects from working on a VCS System and organizing a project structure to packaging and distributing.
 
 Usage
 -----
-two files are generated from the provided pdf file, the Front-side and Back-side file, they are to be printed in sequence :
+Two files are generated from the provided pdf file, the Front-side and Back-side files, they are to be printed in sequence :
 
 .. image:: https://github.com/downloads/yedderson/PyBooklet/pybooklet_manual.png
-  :scale: 80
-  :align: center
+  :scale: 80 %
 
 
 Installation
@@ -32,7 +30,7 @@ A binary distribution for Windows is available to download_. or, if you want run
 ``pip install PyBooklet``
 
 and
-``Python PyBooklet.py`` afterward (PyBooklet.py will be in the scripts directory) to run the application
+``Python PyBooklet.py`` afterward (PyBooklet.py will be in the Scripts directory) to run the application
 
 
 uninstall
