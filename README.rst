@@ -22,7 +22,8 @@ Usage:
 ------
 two files are generated from the provided pdf file, the Front-side and Back-side file, they are to be printed in sequence :
 
-.. image:: picture.png
+.. image:: https://github.com/downloads/yedderson/PyBooklet/pybooklet_manual.png
+  :scale: 80
   :align: center
 
 
