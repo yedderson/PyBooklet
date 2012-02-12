@@ -24,19 +24,18 @@ Two files are generated from the provided pdf file, the Front-side and Back-side
 Installation
 ------------
 .. _download: http://github.com/yedderson/PyBooklet/downloads
-A binary distribution for Windows is available to download_. or, if you want run it from source, install it with :
+A binary distribution for Windows is available to download_. or, if you want run it from source, install it with : ::
 
+ pip install PyBooklet
 
-$ pip install PyBooklet
+A launcher script will be placed in the Python's Scripts directory, to run the application use: ::
 
-A launcher script will be placed in the Python's Scripts directory, to run the application use:
-
-
-$ Python PyBooklet.py
-
+ Python PyBooklet.py
 
 uninstall
 ---------
 
+ ::
 
-$ pip uninstall Pybooklet
+ pip uninstall PyBooklet
+
