@@ -25,15 +25,18 @@ Installation
 ------------
 .. _download: http://github.com/yedderson/PyBooklet/downloads
 A binary distribution for Windows is available to download_. or, if you want run it from source, install it with :
-::
+
+
 $ pip install PyBooklet
 
 A launcher script will be placed in the Python's Scripts directory, to run the application use:
-::
+
+
 $ Python PyBooklet.py
 
 
 uninstall
 ---------
-::
+
+
 $ pip uninstall Pybooklet
