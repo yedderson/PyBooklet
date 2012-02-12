@@ -37,8 +37,7 @@ from PySide import QtGui, QtCore
 import time
 import PySide
 from PyBooklet_ui import Ui_MainWindow as UI
-from bookletgen import BookletGenerator, ProgressStatus, Job
-
+from Generator import BookletGenerator, ProgressStatus, Job
 
 
 class MainWindow(QtGui.QMainWindow, UI):
@@ -46,8 +45,7 @@ class MainWindow(QtGui.QMainWindow, UI):
         """
         The main window, the controller.
 
-        Setup the UI and handles all the the user interactions, shows confirmation dialogs
-        and connects signals.
+        Setups the UI and handles all the the user interactions, shows confirmation dialogs, etc.
         """
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
@@ -63,7 +61,7 @@ class MainWindow(QtGui.QMainWindow, UI):
 
         def actionAbout():
             """
-            Pop-up the AboutBox dialog.
+            Pops up the aboutBox dialog.
             """
             QtGui.QMessageBox.about(self,
                                     "About PyBooklet",
@@ -82,21 +80,20 @@ class MainWindow(QtGui.QMainWindow, UI):
 
     def select_file_clicked(self):
         """
-        pop up a file dialog and reflect the inputs to the selected_file textbox.
+        Pops up a file dialog and reflect the inputs to the selected_file textbox.
         """
         self.selected_file.setText(
             QtGui.QFileDialog.getOpenFileName(self, str("Open File"), "/", str("PDF Files (*.pdf)"))[0])
 
     def select_directory_clicked(self):
         """
-        pop up a directory dialog and reflect the inputs to the selected_directory textbox.
+        Pops up a directory dialog and reflect the inputs to the selected_directory textbox.
         """
         self.selected_directory.setText(QtGui.QFileDialog.getExistingDirectory(self))
 
     def generate_clicked(self):
         """
-        when clicked it fire the Generator and the ProgressUpdater
-        thread with all the details gathered from the UI.
+        When clicked it fire the Generator and the ProgressUpdater threads,
         it then toggle to allow abortion of the running threads.
         """
 
@@ -129,8 +126,8 @@ class MainWindow(QtGui.QMainWindow, UI):
 
     def finished_(self):
         """
-        pop up a dialog when the generator returns or when the job is cancelled
-        and reset the progress bar ot its initial state.
+        Pops up a dialog when the generator returns or when the job is cancelled
+        then resets the progress bar ot its initial state.
         """
         if QtGui.QMessageBox.information(self, "PyBooklet", "Finished" + " " * 30) == QtGui.QMessageBox.Ok:
             ProgressStatus.message = "Ready"
@@ -145,7 +142,7 @@ class MainWindow(QtGui.QMainWindow, UI):
 
     def update_progress(self, message, percentage):
         """
-        receives signals from ProgressUpdater and refreshes the
+        Receives signals from ProgressUpdater and refreshes the
         progressBar component with the emitted values.
         """
         self.progressBar.setValue(percentage)
@@ -163,26 +160,14 @@ class ProgressUpdater(QtCore.QThread):
 
         QtCore.QThread.__init__(self, parent)
 
-
     def run(self):
         """
         When running, it follow the BookletGenerator progress status and emit signals to
-        update the ProgressBar and the text associated with it. Signals are connected to
-        the UpdateProgress() through the mainWindow to keep track of the progress without
-        freezing the UI.
+        update the ProgressBar and the text associated with it.
         """
 
         while not ProgressStatus.message == "Finished" and not self.exiting:
             self.progress_signal.emit(ProgressStatus.message, ProgressStatus.percentage)
             time.sleep(0.2)
 
-
-            
         return
-if __name__ == "__main__":
-    Application = QtGui.QApplication(sys.argv)
-    Application.setApplicationName("PyBooklet")
-    Application.setStyle('cleanlooks')
-    MainWindow = MainWindow()
-    MainWindow.show()
-    sys.exit(Application.exec_())
