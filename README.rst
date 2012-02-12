@@ -35,7 +35,7 @@ A launcher script will be placed in the Python's Scripts directory, to run the a
 uninstall
 ---------
 
- ::
+::
 
  pip uninstall PyBooklet
 
